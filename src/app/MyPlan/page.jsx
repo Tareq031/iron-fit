@@ -1,8 +1,8 @@
 import React from 'react';
 
-const page = () => {
+const MyPlanPage = () => {
     return (
-        <div>
+         <div className="container mx-auto py-8">
             <h1 className="text-3xl font-bold text-center mt-10">My Plan</h1>
             <p className="text-center mt-4">
                 This is the My Plan page. Here you can view and manage your personalized workout plan.
@@ -11,4 +11,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default MyPlanPage;

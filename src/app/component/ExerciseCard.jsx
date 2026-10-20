@@ -2,7 +2,7 @@ import React from 'react';
 
 const ExerciseCard = ({ item }) => {
     return (
-        <div className="card bg-base-100 w-96 shadow-sm">
+        <div className="card bg-base-100 shadow-sm">
   <figure>
     <img
       src={item.image}
