@@ -1,15 +1,13 @@
 import Image from "next/image";
-import Navbar from "./component/Navbar";
+
 import "./globals.css";
-import Footer from "./component/Footer";
+
 
 
 export default function Home() {
   return (
     <div>
-      <Navbar />
-
-      <Footer />
+      <h1 className="text-3xl font-bold underline">Hello world!</h1>
     </div>
   );
 }
