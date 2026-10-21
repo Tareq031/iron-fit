@@ -1,6 +1,7 @@
 import React from 'react';
 import ExerciseCard from '../component/ExerciseCard';
 import Banner from '../component/Banner';
+import { Ironstype } from '../type/ironstype';
 
 
 
@@ -27,7 +28,7 @@ const WorkoutsPage = async () => {
                 </div>
 
                 <div className="grid grid-cols-1 gap-4 mx-auto md:grid-cols-2 lg:grid-cols-3">
-                    {data.map((item) => (
+                    {data.map((item: Ironstype) => (
                         <ExerciseCard key={item.id} item={item} />
                     ))}
                 </div>

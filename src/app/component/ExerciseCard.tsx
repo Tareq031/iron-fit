@@ -1,9 +1,19 @@
+
 import React from "react";
 import Image from "next/image";
-const ExerciseCard = ({ item }) => {
-  return (
-    <div className="overflow-hidden rounded-2xl border border-[#292b32] bg-[#15161b] text-white transition-all duration-300 hover:-translate-y-1 hover:border-[#c6ff00]/50">
+import Link from "next/link";
+import { Ironstype } from "../type/ironstype";
 
+interface IExerciseCardProps {
+  item: Ironstype;
+}
+
+const ExerciseCard = ({ item }: IExerciseCardProps) => {
+  return (
+    <Link
+      href={`/Workouts/${item.id}`}
+      className="group block overflow-hidden rounded-2xl border border-[#292b32] bg-[#15161b] text-white transition-all duration-300 hover:-translate-y-1 hover:border-[#c6ff00]/50"
+    >
       {/* Exercise Image */}
       <div className="h-[180px] w-full overflow-hidden">
         <Image
@@ -11,13 +21,12 @@ const ExerciseCard = ({ item }) => {
           height={400}
           src={item.image}
           alt={item.name}
-          className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
       </div>
 
       {/* Card Content */}
       <div className="p-5">
-
         {/* Muscle Group Badges */}
         <div className="mb-4 flex flex-wrap gap-2">
           {item.muscleGroups.map((muscle, index) => (
@@ -45,7 +54,6 @@ const ExerciseCard = ({ item }) => {
 
         {/* Workout Stats */}
         <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-gray-400">
-
           {/* Duration */}
           <span className="flex items-center gap-1.5">
             <svg
@@ -82,12 +90,11 @@ const ExerciseCard = ({ item }) => {
             >
               <path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3L7 14.2 2 9.3l6.9-1L12 2Z" />
             </svg>
-            {item.rating?.toFixed(1)}
+            {item.rating?.toFixed(1) ?? "N/A"}
           </span>
-
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
