@@ -3,6 +3,8 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import type { Ironstype } from "../../type/ironstype";
+import ReadButton from "@/app/component/button/ReadButton";
+import SaveButton from "@/app/component/button/SaveButton";
 
 
 interface IWorkoutDetailsPageProps {
@@ -124,21 +126,10 @@ const WorkoutDetailsPage = async ({
 
           {/* Action Buttons */}
           <div className="flex flex-wrap gap-3 pt-1">
-            <Link
-              href="/MyPlan"
-              className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#c8ff00] px-4 py-3 text-xs font-bold text-black transition hover:bg-[#b5e600]"
-            >
-              <span>+</span>
-              Add to My Plan
-            </Link>
+         <ReadButton exercise={workout}/>
+              
 
-            <Link
-              href="/Workouts"
-              className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#30343e] px-4 py-3 text-xs font-medium text-gray-300 transition hover:bg-[#1b1e26]"
-            >
-              <span>♡</span>
-              Save for later
-            </Link>
+        <SaveButton exercise={workout}/>
           </div>
         </div>
       </div>

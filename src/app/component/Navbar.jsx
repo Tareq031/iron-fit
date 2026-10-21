@@ -1,9 +1,15 @@
-import React from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import logo from '@/assets/logo.png';
+"use client";
+
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
+
+import logo from "@/assets/logo.png";
+import { useExercise } from "@/app/context/ExerciseContext";
 
 const Navbar = () => {
+  const { exercises, selectedExercise } = useExercise();
+
   const Links = (
     <>
       <li>
@@ -37,6 +43,7 @@ const Navbar = () => {
             alt="FitLog Logo"
             className="h-8 w-8 object-contain"
           />
+
           <span className="text-xl font-black tracking-wide">
             FITLOG
           </span>
@@ -49,22 +56,32 @@ const Navbar = () => {
           </ul>
         </div>
 
-        {/* Right Side */}
+        {/* Right Side: Plan and Saved Count */}
         <div className="flex items-center gap-5 text-xs font-semibold">
 
-          <div className="flex items-center gap-2">
+          {/* Plan Count */}
+          <Link
+            href="/MyPlan"
+            className="flex items-center gap-2"
+          >
             <span className="text-gray-400">Plan</span>
-            <span className="flex h-5 min-w-5 items-center justify-center rounded-full bg-[#c6ff00] px-1 text-[11px] font-bold text-black">
-              0
-            </span>
-          </div>
 
-          <div className="flex items-center gap-2">
-            <span className="text-gray-400">Saved</span>
-            <span className="flex h-5 min-w-5 items-center justify-center rounded-full border border-[#3b3b42] px-1 text-[11px] text-gray-300">
-              0
+            <span className="flex h-5 min-w-5 items-center justify-center rounded-full bg-[#c6ff00] px-1 text-[11px] font-bold text-black">
+              {exercises.length}
             </span>
-          </div>
+          </Link>
+
+          {/* Saved Count */}
+          <Link
+            href="/MyPlan"
+            className="flex items-center gap-2"
+          >
+            <span className="text-gray-400">Saved</span>
+
+            <span className="flex h-5 min-w-5 items-center justify-center rounded-full border border-[#3b3b42] px-1 text-[11px] text-gray-300">
+              {selectedExercise.length}
+            </span>
+          </Link>
 
         </div>
       </nav>
