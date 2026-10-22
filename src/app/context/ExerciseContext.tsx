@@ -1,4 +1,5 @@
 "use client";
+import { toast } from "react-toastify";
 
 import React, {
 createContext,
@@ -87,7 +88,7 @@ if (exercises.length >= 5) {
 
 setExercises((previous) => [...previous, exercise]);
 
-alert(`${exercise.name} added to Today's Plan!`);
+toast.success(`${exercise.name} added to Today's Plan!`);
 router.push("/MyPlan");
 
 };
@@ -102,7 +103,7 @@ return;
 
 setSelectedExercise((previous) => [...previous, exercise]);
 
-alert(`${exercise.name} saved for later!`);
+toast.success(`${exercise.name} saved for later!`);
 router.push("/MyPlan");
 
 };
@@ -113,7 +114,7 @@ setExercises((previous) =>
 previous.filter((item) => item.id !== id)
 );
 
-alert("Exercise removed from Today's Plan!");
+toast.info("Exercise removed from Today's Plan!");
 
 };
 
@@ -123,7 +124,7 @@ setSelectedExercise((previous) =>
 previous.filter((item) => item.id !== id)
 );
 
-alert("Exercise removed from Saved!");
+toast.info("Exercise removed from Saved!");
 
 };
 
