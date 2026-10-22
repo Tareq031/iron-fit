@@ -1,8 +1,8 @@
-💪 FitLog — Workout Library
+💪 iron-fit — Workout Library
 
 Train with intent. Log every set.
 
-FitLog is a dark-themed workout library built with Next.js, TypeScript, and Tailwind CSS. It helps users explore workouts, view exercise details, create a daily workout plan, and save exercises for later.
+iron-fit is a dark-themed workout library built with Next.js, TypeScript, and Tailwind CSS. It helps users explore workouts, view exercise details, create a daily workout plan, and save exercises for later.
 
 ✨ Features
 
@@ -29,41 +29,10 @@ FitLog is a dark-themed workout library built with Next.js, TypeScript, and Tail
 - React Toastify — Toast notifications
 - Git & GitHub — Version control
 
-🚀 Getting Started
 
-Prerequisites
 
-Make sure you have Node.js and npm installed.
 
-Installation
 
-1. Clone the repository
-
-git clone YOUR_GITHUB_REPOSITORY_URL
-
-2. Navigate to the project directory
-
-cd fitlog
-
-3. Install dependencies
-
-npm install
-
-4. Start the development server
-
-npm run dev
-
-5. Open the application
-
-Visit "http://localhost:3000" in your browser.
-
-🔗 API
-
-FitLog fetches workout data from:
-
-"https://api.abcz.workers.dev/api/fitlog"
-
-The API provides exercise information, including names, images, muscle groups, equipment, difficulty, duration, calories, ratings, descriptions, and instructions.
 
 📁 Main Project Structure
 
@@ -89,11 +58,11 @@ src/
     │   └── ironstype.ts
     ├── layout.tsx
     ├── page.tsx
-    └── not-found.tsx
+    
 
 🎯 Project Goals
 
-FitLog was developed to practice building a modern web application using Next.js, reusable components, API integration, shared state management, responsive design, and client-side data persistence.
+iron-fit was developed to practice building a modern web application using Next.js, reusable components, API integration, shared state management, responsive design, and client-side data persistence.
 
 👨‍💻 Author
 
@@ -103,4 +72,4 @@ CSE Student | Full Stack Developer
 
 ---
 
-Train hard, log honest.
+
