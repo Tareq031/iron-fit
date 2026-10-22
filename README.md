@@ -31,33 +31,6 @@ iron-fit is a dark-themed workout library built with Next.js, TypeScript, and Ta
 
 
 
-
-
-
-📁 Main Project Structure
-
-src/
-└── app/
-    ├── component/
-    │   ├── button/
-    │   │   ├── ReadButton.tsx
-    │   │   └── SaveButton.tsx
-    │   ├── Banner.tsx
-    │   ├── ExerciseCard.tsx
-    │   ├── Navbar.tsx
-    │   └── Footer.tsx
-    ├── context/
-    │   └── ExerciseContext.tsx
-    ├── MyPlan/
-    │   └── page.tsx
-    ├── Workouts/
-    │   ├── page.tsx
-    │   └── [id]/
-    │       └── page.tsx
-    ├── type/
-    │   └── ironstype.ts
-    ├── layout.tsx
-    ├── page.tsx
     
 
 🎯 Project Goals
